@@ -1,0 +1,192 @@
+@import "tailwindcss";
+
+/* ===== VELORA Design System ===== */
+@theme {
+  --color-velora-black: #1A1A1A;
+  --color-velora-charcoal: #2D2D2D;
+  --color-velora-dark: #3A3A3A;
+  --color-velora-mid: #6B6B6B;
+  --color-velora-stone: #9B958F;
+  --color-velora-beige: #F5F0EB;
+  --color-velora-cream: #FAF8F5;
+  --color-velora-white: #FAFAF8;
+  --color-velora-marble: #F8F6F3;
+  --color-velora-gold: #C9A96E;
+  --color-velora-gold-light: #D4BA85;
+  --color-velora-wood: #8B7355;
+  --color-velora-sage: #7A8B6F;
+  --color-velora-navy: #2C3E50;
+  
+  --font-heading: 'Cormorant Garamond', 'Georgia', serif;
+  --font-body: 'Inter', 'Helvetica Neue', sans-serif;
+}
+
+/* ===== Base Styles ===== */
+@layer base {
+  html {
+    font-family: var(--font-body);
+    color: var(--color-velora-black);
+    background-color: var(--color-velora-cream);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: auto;
+  }
+
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--color-velora-gold);
+    color: white;
+  }
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-velora-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-velora-stone);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-velora-gold);
+}
+
+/* ===== Typography ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+/* ===== Utility Animations ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(201, 169, 110, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(201, 169, 110, 0.6); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  50% { width: 24px; }
+  100% { width: 0; }
+}
+
+.typing-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-velora-gold);
+  animation: typingBounce 1.4s infinite ease-in-out both;
+}
+
+.typing-dot:nth-child(1) { animation-delay: 0s; }
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typingBounce {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+/* ===== Glass Effect ===== */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-dark {
+  background: rgba(26, 26, 26, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ===== Section spacing ===== */
+.container-center {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-padding {
+  padding: 120px 48px;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 80px 24px;
+  }
+}
+
+/* ===== Smooth image rendering ===== */
+img {
+  image-rendering: auto;
+}
