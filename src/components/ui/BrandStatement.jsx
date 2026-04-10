@@ -31,14 +31,14 @@ export default function BrandStatement() {
 
   return (
     <section ref={sectionRef} className="relative bg-velora-cream overflow-hidden">
-      <div className="py-32 md:py-48 px-8 max-w-5xl mx-auto text-center w-full">
+      <div className="py-24 md:py-48 px-8 max-w-5xl mx-auto text-center w-full">
         {/* Decorative line */}
         <div className="flex justify-center mb-12">
           <div ref={lineRef} className="h-[1px] bg-velora-gold/40 max-w-[120px]" style={{ width: 0 }} />
         </div>
 
         <TextReveal>
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-velora-black leading-[1.3] mb-8">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-velora-black leading-[1.4] sm:leading-[1.3] mb-8">
             "A kitchen is not just a room.<br />
             <span className="text-velora-gold">It is where life unfolds.</span>"
           </h2>
@@ -51,8 +51,8 @@ export default function BrandStatement() {
         </TextReveal>
 
         {/* Decorative elements */}
-        <div className="absolute top-12 left-12 w-24 h-24 border border-velora-gold/10 rounded-full opacity-50" />
-        <div className="absolute bottom-12 right-12 w-16 h-16 border border-velora-gold/10 rounded-full opacity-30" />
+        <div className="absolute top-8 left-8 w-12 h-12 md:w-24 md:h-24 border border-velora-gold/10 rounded-full opacity-50" />
+        <div className="absolute bottom-8 right-8 w-8 h-8 md:w-16 md:h-16 border border-velora-gold/10 rounded-full opacity-30" />
       </div>
     </section>
   )

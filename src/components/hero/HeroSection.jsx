@@ -140,11 +140,10 @@ export default function HeroSection() {
               className="absolute top-1/4 left-10 w-5 h-5 bg-[#FAF8F5] rounded-full shadow-[0_0_50px_#FAF8F5] opacity-90 z-20"
             ></motion.div>
             
-            {/* Floating Glass UI Card */}
             <motion.div 
               animate={{ y: [0, -15, 0] }} 
               transition={{ repeat: Infinity, duration: 7, ease: "easeInOut", delay: 0.3 }}
-              className="relative w-[320px] h-[140px] bg-white/[0.04] backdrop-blur-md border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.8)] flex items-center p-5 rounded-sm gap-5"
+              className="relative hidden md:flex w-[320px] h-[140px] bg-white/[0.04] backdrop-blur-md border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.8)] items-center p-5 rounded-sm gap-5"
             >
                 <div className="w-[90px] h-[100px] rounded shrink-0 overflow-hidden relative shadow-lg">
                    <div className="absolute inset-0 bg-cover bg-center brightness-110" style={{ backgroundImage: "url('/images/kitchen-l-shape.png')" }}></div>
@@ -198,7 +197,7 @@ export default function HeroSection() {
             <div className="overflow-hidden">
               <motion.h1 
                 variants={itemVariants}
-                className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] xl:text-[5.5rem] font-light text-white leading-none drop-shadow-2xl tracking-tight"
+                className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-[5rem] xl:text-[5.5rem] font-light text-white leading-tight sm:leading-none drop-shadow-2xl tracking-tight"
               >
                 Crafted Luxury.
               </motion.h1>
@@ -206,7 +205,7 @@ export default function HeroSection() {
             <div className="overflow-hidden">
               <motion.h1 
                 variants={itemVariants}
-                className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] xl:text-[5.5rem] font-light text-white/60 leading-[1.05] drop-shadow-2xl tracking-tight"
+                className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-[5rem] xl:text-[5.5rem] font-light text-white/60 leading-tight sm:leading-[1.05] drop-shadow-2xl tracking-tight"
               >
                 Engineered Precision.
               </motion.h1>

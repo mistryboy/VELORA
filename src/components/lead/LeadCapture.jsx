@@ -125,7 +125,7 @@ export default function LeadCapture() {
 
                 {/* Email */}
                 <div className="relative">
-                  <label className="font-body text-[10px] tracking-[0.3em] uppercase text-velora-cream/30 block mb-3">
+                  <label className="font-body text-[10px] tracking-[0.3em] uppercase text-velora-cream/60 block mb-3">
                     Email Address
                   </label>
                   <input
@@ -135,7 +135,7 @@ export default function LeadCapture() {
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     onFocus={() => setFocused('email')}
                     onBlur={() => setFocused('')}
-                    className="w-full bg-transparent border-b border-white/10 pb-3 text-velora-cream font-body text-sm focus:outline-none focus:border-velora-gold transition-colors duration-500 placeholder:text-velora-cream/15"
+                    className="w-full bg-transparent border-b border-white/10 pb-4 text-velora-cream font-body text-sm focus:outline-none focus:border-velora-gold transition-colors duration-500 placeholder:text-velora-cream/15"
                     placeholder="Enter your email"
                   />
                   <motion.div

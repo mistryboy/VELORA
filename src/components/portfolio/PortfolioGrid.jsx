@@ -100,13 +100,13 @@ export default function PortfolioGrid() {
                   initial={false}
                   className="transform translate-y-0 md:translate-y-6 md:group-hover:translate-y-0 transition-transform duration-700"
                 >
-                  <span className="font-body text-[10px] tracking-[0.3em] uppercase text-velora-gold block mb-2">
+                  <span className="font-body text-[10px] tracking-[0.3em] uppercase text-velora-gold block mb-2 md:mb-3">
                     {project.style}
                   </span>
-                  <h3 className="font-heading text-2xl md:text-3xl font-light text-velora-cream mb-1">
+                  <h3 className="font-heading text-xl sm:text-2xl md:text-3xl font-light text-velora-cream mb-1">
                     {project.title}
                   </h3>
-                  <p className="font-body text-xs text-velora-cream/50">{project.location}</p>
+                  <p className="font-body text-[10px] sm:text-xs text-velora-cream/50">{project.location}</p>
                 </motion.div>
               </div>
             </motion.div>

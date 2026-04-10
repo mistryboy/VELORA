@@ -85,12 +85,14 @@ export default function Navbar() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-velora-black/95 backdrop-blur-xl"
+            className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-[#050505]/98 backdrop-blur-2xl px-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
+            {/* Minimal backdrop separation */}
+            <div className="absolute top-0 left-0 w-full h-[1px] bg-white/5" />
             {links.map((link, i) => (
               <motion.button
                 key={link.id}

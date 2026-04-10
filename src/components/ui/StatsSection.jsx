@@ -55,7 +55,7 @@ export default function StatsSection() {
               <span className="font-heading text-4xl md:text-5xl font-light text-velora-gold block mb-2">
                 {stat.value}
               </span>
-              <span className="font-body text-[10px] tracking-[0.3em] uppercase text-velora-cream/30">
+              <span className="font-body text-[10px] tracking-[0.3em] uppercase text-velora-cream/60">
                 {stat.label}
               </span>
             </div>

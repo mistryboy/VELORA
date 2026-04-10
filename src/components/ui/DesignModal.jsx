@@ -49,7 +49,7 @@ export default function DesignModal({ isOpen, onClose }) {
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
           >
             {/* Header */}
-            <div className="px-8 pt-8 pb-4 border-b border-white/5">
+            <div className="px-6 md:px-8 pt-6 md:pt-8 pb-4 border-b border-white/5">
               <div className="flex items-center justify-between">
                 <div>
                   <span className="font-body text-[10px] tracking-[0.5em] uppercase text-velora-gold block mb-1">
@@ -82,7 +82,7 @@ export default function DesignModal({ isOpen, onClose }) {
             </div>
 
             {/* Content */}
-            <div className="px-8 py-8 min-h-[280px]">
+            <div className="px-6 md:px-8 py-6 md:py-8 min-h-[280px]">
               <AnimatePresence mode="wait">
                 {/* Step 0: Budget */}
                 {step === 0 && (

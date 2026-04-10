@@ -172,7 +172,7 @@ export default function ScrollSequence() {
   return (
     <div ref={containerRef} id="scroll-experience" className="relative">
       {/* ===== 1. ENTRY SCENE ===== */}
-      <section className="relative h-screen overflow-hidden">
+      <section className="relative h-[70vh] md:h-screen overflow-hidden">
         <div
           ref={entryImageRef}
           className="w-full h-full relative"
@@ -185,13 +185,13 @@ export default function ScrollSequence() {
         >
           <div className="absolute inset-0 bg-velora-black/50" />
           <div className="entry-text-1 absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-            <span className="font-body text-xs tracking-[0.5em] uppercase text-velora-gold mb-6">
+            <span className="font-body text-xs tracking-[0.5em] uppercase text-velora-gold mb-4 md:mb-6">
               The VELORA Experience
             </span>
-            <h2 className="font-heading text-4xl md:text-6xl lg:text-7xl font-light text-velora-cream max-w-4xl leading-[1.1] mb-6">
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-light text-velora-cream max-w-4xl leading-[1.2] md:leading-[1.1] mb-6">
               Every Detail,<br />Intentionally Crafted
             </h2>
-            <p className="font-body text-sm text-velora-cream/50 max-w-md">
+            <p className="font-body text-xs sm:text-sm text-velora-cream/50 max-w-md">
               Scroll to explore our design philosophy and discover the art behind every VELORA kitchen.
             </p>
           </div>
